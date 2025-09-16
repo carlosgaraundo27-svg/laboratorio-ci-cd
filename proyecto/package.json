@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"(Sin pruebas todavía)\" && exit 0",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"(Sin pruebas todavía)\" && exit 0"
   },
   "keywords": [],
   "author": "",
