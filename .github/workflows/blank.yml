@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install deps
-        run: npm ci
+        run: npm install
         # Si no tienes package-lock.json aún, usa: npm install
 
       - name: Lint (opcional)
