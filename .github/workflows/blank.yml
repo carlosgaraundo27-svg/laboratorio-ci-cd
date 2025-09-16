@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install deps
-        run: npm install
+        run: npm ci
         # Si no tienes package-lock.json aún, usa: npm install
 
       - name: Lint (opcional)
@@ -54,4 +54,3 @@ jobs:
         with:
           name: mi-primera-app
           path: mi-primera-app.tar.gz
-
