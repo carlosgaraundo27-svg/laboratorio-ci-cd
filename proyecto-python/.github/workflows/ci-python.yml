@@ -27,9 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then 
           pip install -r requirements.txt
-          echo "✅ Dependencias instaladas desde requirements.txt"
+          echo "Dependencias instaladas desde requirements.txt"
         else
-          echo "⚠️ No se encontró requirements.txt, instalando paquetes básicos..."
+          echo "No se encontró requirements.txt, instalando paquetes básicos..."
           pip install pytest unittest
         fi
 
@@ -40,42 +40,42 @@ jobs:
         
         # Intentar con pytest primero, luego con unittest
         if python -m pytest -v; then
-          echo "✅ Pruebas pasaron con pytest"
+          echo "Pruebas pasaron con pytest"
         else
-          echo "⚠️ pytest falló, intentando con unittest..."
-          python -m unittest discover -v || echo "✅ Validación básica completada"
+          echo "pytest falló, intentando con unittest..."
+          python -m unittest discover -v || echo "Validación básica completada"
         fi
 
     # ETAPA 3: DEPLOY - Simulación de despliegue
     - name: Deploy - Simulación de despliegue
       run: |
         echo " "
-        echo "🚀 INICIANDO SIMULACIÓN DE DESPLIEGUE"
+        echo "INICIANDO SIMULACIÓN DE DESPLIEGUE"
         echo "==========================================="
-        echo "✅ Build: Dependencias instaladas correctamente"
-        echo "✅ Test: Pruebas ejecutadas exitosamente"
-        echo "📦 Empaquetando aplicación Python..."
-        echo "🌐 Desplegando en entorno productivo..."
-        echo "🔍 Realizando verificaciones finales..."
+        echo "Build: Dependencias instaladas correctamente"
+        echo "Test: Pruebas ejecutadas exitosamente"
+        echo "Empaquetando aplicación Python..."
+        echo "Desplegando en entorno productivo..."
+        echo "Realizando verificaciones finales..."
         echo " "
-        echo "📊 ESTADO DEL DESPLIEGUE:"
+        echo "ESTADO DEL DESPLIEGUE:"
         echo "-------------------------"
-        echo "✅ Servicio web: ACTIVO"
-        echo "✅ Base de datos: CONECTADA" 
-        echo "✅ API endpoints: RESPONDIENDO"
-        echo "✅ Logs del sistema: OK"
+        echo "Servicio web: ACTIVO"
+        echo "Base de datos: CONECTADA" 
+        echo "API endpoints: RESPONDIENDO"
+        echo "Logs del sistema: OK"
         echo " "
-        echo "🎉 ¡DESPLIEGUE SIMULADO COMPLETADO!"
+        echo "¡DESPLIEGUE SIMULADO COMPLETADO!"
         echo "==========================================="
 
     # Verificación final
     - name: Verificación final del pipeline
       run: |
         echo " "
-        echo "📋 RESUMEN EJECUCIÓN:"
+        echo "RESUMEN EJECUCIÓN:"
         echo "---------------------"
-        echo "✔️ Build: COMPLETADO"
-        echo "✔️ Test: COMPLETADO"
-        echo "✔️ Deploy: SIMULADO EXITOSAMENTE"
-        echo "✔️ Pipeline: CONFIGURADO CORRECTAMENTE"
+        echo "Build: COMPLETADO"
+        echo "Test: COMPLETADO"
+        echo "Deploy: SIMULADO EXITOSAMENTE"
+        echo "Pipeline: CONFIGURADO CORRECTAMENTE"
         echo "---------------------"
